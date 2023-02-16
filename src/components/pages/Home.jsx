@@ -57,7 +57,6 @@ const Home = () => {
 
     info: {
       display: 'flex',
-      flexDirection: width <= 425 ? 'column' : 'row',
       padding: '1rem',
       justifyContent: 'space-around',
       alignItems: width <= 425 ? 'center' : '',
