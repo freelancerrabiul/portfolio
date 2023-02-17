@@ -22,7 +22,7 @@ const Home = () => {
   const style = {
     home: {
       display: width <= 425 ? 'block' : 'flex',
-      justifyContent: 'space-around',
+      justifyContent: width <= 425 ? 'space-between' : 'space-around',
       alignItems: 'center',
       textAlign: 'center',
       hight: '100vh',
@@ -62,6 +62,10 @@ const Home = () => {
       alignItems: width <= 425 ? 'center' : '',
       alignContent: 'center',
     },
+    heading: {
+      paddingBottom: '0.5rem',
+      fontSize: width <= 425 ? 'large' : 'x-large',
+    },
   };
 
   return (
@@ -82,9 +86,7 @@ const Home = () => {
       </div>
       <div style={style.info}>
         <div style={{ fontFamily: 'arial' }}>
-          <h3 style={{ paddingBottom: '0.5rem' }}>
-            Client Software (Front End):
-          </h3>
+          <p style={style.heading}>Skiils (Front End):</p>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <img src={html} alt="html" />
             <p style={{ paddingLeft: '0.5rem', fontSize: 'large' }}> Html </p>
@@ -181,9 +183,7 @@ const Home = () => {
         </div>
 
         <div style={{ fontFamily: 'arial' }}>
-          <h3 style={{ paddingBottom: '0.5rem' }}>
-            Server Software (Back End):
-          </h3>
+          <p style={style.heading}>Skiils (Back End):</p>
 
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <img src={python} alt="Python" />
